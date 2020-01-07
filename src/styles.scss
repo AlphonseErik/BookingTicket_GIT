@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.owl-prev {
+  position: absolute;
+  top: 30%;
+  left: -50px;
+  span {
+    font-size: 70px;
+  }
+  &:hover {
+    span {
+      background: none;
+    }
+  }
+}
+.owl-next {
+  position: absolute;
+  top: 30%;
+  right: -50px;
+  span {
+    font-size: 70px;
+  }
+}

@@ -1,0 +1,24 @@
+<div id="selector">
+    <div class="row my-4">
+        <div class="col-12 text-center">
+            <button class="btn mr-2" [ngClass]="{'btn-success': isCurrentFilm}" (click)="displayCurrentFilm()">Đang
+                Chiếu</button>
+            <button class="btn " [ngClass]="{'btn-success': !isCurrentFilm}" (click)="displayUpcomingFilm()">Sắp
+                Chiếu</button>
+        </div>
+        <div id="selector">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" *ngIf="isCurrentFilm; else upcomingPhim">
+                        <app-current-film></app-current-film>
+                    </div>
+                    <ng-template #upcomingPhim>
+                        <div class="col-12">
+                            <app-upcoming-film></app-upcoming-film>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

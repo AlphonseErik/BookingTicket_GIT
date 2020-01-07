@@ -1,0 +1,9 @@
+<div class="container">
+    <div id="isShowing">
+        <div class="row">
+            <div class="col-3" *ngFor="let film of MovieList">
+                <app-film-item [FilmItem]="film"></app-film-item>
+            </div>
+        </div>
+    </div>
+</div>
