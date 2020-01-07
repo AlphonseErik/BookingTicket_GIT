@@ -5,12 +5,16 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: "",
-    loadChildren:"./user/home-page/home-page.module@HomeModule"
+    loadChildren: "./home/home-page/home-page.module#HomePageModule"
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }

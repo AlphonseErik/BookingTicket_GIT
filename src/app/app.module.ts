@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './_core/interceptors/token';
 import { RouterModule } from '@angular/router';
 
@@ -20,7 +20,8 @@ import { RouterModule } from '@angular/router';
     UserModule,
     NgbPaginationModule,
     NgbAlertModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [
     {

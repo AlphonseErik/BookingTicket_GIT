@@ -7,6 +7,7 @@ import { CurrentFilmComponent } from './current-film/current-film.component';
 import { UpcomingFilmComponent } from './upcoming-film/upcoming-film.component';
 import { FilmItemComponent } from './film-item/film-item.component';
 import { LayoutModule } from './layout/layout.module';
+import { HomePageRoutingModule } from './home-page-routing.module';
 
 
 
@@ -18,7 +19,7 @@ import { LayoutModule } from './layout/layout.module';
     CurrentFilmComponent,
     UpcomingFilmComponent,
     FilmItemComponent],
-  imports: [CommonModule, LayoutModule
+  imports: [CommonModule, LayoutModule, HomePageRoutingModule
   ],
   exports: [
     HomePageComponent,
