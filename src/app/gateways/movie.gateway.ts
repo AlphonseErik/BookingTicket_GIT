@@ -11,8 +11,12 @@ export class MovieGateway {
         return this._http.get(
             "http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01"
         )
+    };
+    fetchMovieDetail(id: string): Observable<any> {
+        return this._http.get(
+            'http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=' + id
+        )
     }
-
 
     constructor(private _http: HttpClient) { }
 }

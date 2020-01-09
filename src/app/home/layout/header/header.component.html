@@ -26,12 +26,20 @@
             </li>
         </ul>
         <ul id="item__right" class="navbar-nav">
-            <li class="nav-item">
-                <a href="#" class="nav-link">
+            <li class="nav-item" *ngIf="credentials; else authSection">
+                <span class="nav-link">
                     <i class="fa fa-user-circle"></i>
-                    <p>Đăng nhập</p>
-                </a>
+                    Hi, {{credentials.hoTen}}
+                </span>
             </li>
+            <ng-template #authSection>
+                <li class="nav-item">
+                    <a routerLink="/signin" class="nav-link">
+                        <i class="fa fa-user-circle"></i>
+                        <p>Đăng nhập</p>
+                    </a>
+                </li>
+            </ng-template>
         </ul>
     </div>
 </nav>

@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div id="movieDetail">
+    <div class="card">
+        <img [src]="movieDetail?.hinhAnh" alt="movieDetail?.tenPhim">
+        <div class="card__detail">
+            <div class="card__detail__left">
+                <img [src]="movieDetail?.hinhAnh" alt="movieDetail?.tenPhim">
+            </div>
+            <div class="card__detail__right">
+                <p>
+                    {{movieDetail?.ngayKhoiChieu | date:'dd-MM-yyyy'}}
+                </p>
+                <span>{{movieDetail?.tenPhim}}</span>
+                <hr>
+                <button [routerLink]="'booking'" routerLinkActive="active">Mua vé</button>
+            </div>
+        </div>
+        <div class="card__detail__item">
+            <app-detail-page-selector></app-detail-page-selector>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

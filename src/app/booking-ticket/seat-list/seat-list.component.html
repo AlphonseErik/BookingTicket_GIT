@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <!-- <app-seat-item (seatEmitter)="outputSeatHandler($event)" *ngFor="let item of seatArr" [seatItem]="item">
+            </app-seat-item> -->
+        </div>
+        <div class="col-7">
+            <h1 class="display-4 text-center">Danh Sách Ghế Đã Đặt ({{bookingArr.length}})</h1>
+            <p *ngFor="let item of bookingArr">Ghế: {{item?.SoGhe}} ${{item?.Gia}}
+                <span class="text-warning" (click)="cancelSeat(item.SoGhe)">Huỷ</span>
+            </p>
+        </div>
+    </div>
+</div>

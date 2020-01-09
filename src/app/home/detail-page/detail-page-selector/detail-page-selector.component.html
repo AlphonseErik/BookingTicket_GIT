@@ -1,0 +1,22 @@
+<div id="selector">
+    <div class="row my-4">
+        <div class="col-12 content">
+            <p class="showTimes" [ngClass]="{'success': isActive}" (click)="displayShowTime()">Lịch Chiếu</p>
+            <p class="movieDetail" [ngClass]="{'success': !isActive}" (click)="displayMovieDetail()">Thông Tin</p>
+        </div>
+        <div id="selector">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" *ngIf="isActive; else movieDetail">
+                        <app-show-times></app-show-times>
+                    </div>
+                    <ng-template #movieDetail>
+                        <div class="col-12">
+                            <app-film-item-detail></app-film-item-detail>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

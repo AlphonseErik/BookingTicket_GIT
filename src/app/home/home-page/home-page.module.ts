@@ -6,8 +6,10 @@ import { FilmTypeSelectorComponent } from './film-type-selector/film-type-select
 import { CurrentFilmComponent } from './current-film/current-film.component';
 import { UpcomingFilmComponent } from './upcoming-film/upcoming-film.component';
 import { FilmItemComponent } from './film-item/film-item.component';
-import { LayoutModule } from './layout/layout.module';
 import { HomePageRoutingModule } from './home-page-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LayoutModule } from '../layout/layout.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,14 +21,20 @@ import { HomePageRoutingModule } from './home-page-routing.module';
     CurrentFilmComponent,
     UpcomingFilmComponent,
     FilmItemComponent],
-  imports: [CommonModule, LayoutModule, HomePageRoutingModule
+  imports: [
+    CommonModule,
+    LayoutModule,
+    HomePageRoutingModule,
+    NgbModule,
+    RouterModule
   ],
   exports: [
     HomePageComponent,
     CarouselSliderComponent,
     FilmTypeSelectorComponent,
     CurrentFilmComponent,
-    UpcomingFilmComponent
+    UpcomingFilmComponent,
+    FilmItemComponent
   ]
 })
 export class HomePageModule { }

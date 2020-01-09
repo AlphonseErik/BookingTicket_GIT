@@ -1,0 +1,15 @@
+#selector {
+  .row {
+    .content {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      p {
+        display: inline-block;
+        padding: 20px;
+        cursor: pointer;
+        margin: 20px;
+      }
+    }
+  }
+}
